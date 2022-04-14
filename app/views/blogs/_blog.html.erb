@@ -1,0 +1,7 @@
+ <%@user = User.find_by(id: blog.user)%>
+  <tr id="<%= dom_id blog %>">
+    <th scope="col"><%= blog.id %></th>
+      <th scope="col"><%= blog.title %></th>
+      <th scope="col"><%= blog.body %></th>
+      <th scope="col"><%= @user.username %></th>
+      <th scope="col">Tags</th>

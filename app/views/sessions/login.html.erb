@@ -1,0 +1,31 @@
+<%
+=begin%>
+ <div>
+    <h2>Log In<h2><br>
+    <%= form_tag 'login' do%>
+    <div class="mb-3">
+        Username: <%= text_field_tag :username, class:"form-control" %><br>
+    </div>
+    <div class="mb-3">
+        Password: <%= password_field_tag :password, class:"form-control" %><br>
+    </div>
+        <%= submit_tag "Log In"%>
+        <%= link_to "Create an account", new_path, class:"signup"%>
+    <%end%>
+</div> 
+<%
+=end
+%>
+<h1 style="margin:20px">Log In</h1>
+<%= form_with url: login_path do |form|%>
+    <div class="mb-3">
+        <%= form.label :email %>
+        <%= form.text_field :email, class:"form-control"%>
+    </div>
+    <div class="mb-3">
+        <%= form.label :password %>
+        <%= form.password_field :password, class:"form-control"%>
+    </div>
+    <%= submit_tag "Log In" ,class:"btn btn-primary", style:"margin-left:45%;margin-bottom:20px;"%><br>
+    <%= link_to "Create an account", new_path, class:"signup", style:"margin-left:43%" %>
+<% end %>
